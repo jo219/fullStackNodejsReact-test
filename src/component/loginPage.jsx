@@ -37,7 +37,7 @@ class LoginPage extends React.Component {
     
     axios.post(curUrl, this.state.fields)
     .then( (response) => {
-      if (response.data.status === 200) {
+      if (response.data.status == 200) {
         this.setState({ isSuccess: true });
         this.setState({ responseMessage: "User created, please sign in with your password" });
         setTimeout( () => window.location.reload(), 2000);

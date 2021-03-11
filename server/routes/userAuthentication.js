@@ -30,7 +30,7 @@ router.post('/signup', async (req, res) => {
 
 	try {
 		const savedUser = await user.save();
-	    res.send('The activation email for new id:' + savedUser._id + ' has been sent to ' + savedUser.email + ', please click the activation link within 24 hours.');
+	    res.status(200).send('Signed up successfully');
 	} catch(err) {
 		res.status(400).send(err);
 	}

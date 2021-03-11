@@ -18,9 +18,11 @@ router.get('/userInfo/:email', async (req, res) => {
 	}
 });
 
-router.get('invoice/:id', async (req, res) => {
+router.get('/invoice/:id', async (req, res) => {
 	try {
-		const lastInvoice = await Invoice.findOne({"id": req.params.id});
+		console.log("here1");
+		const lastInvoice = await Invoice.findOne({id: req.params.id});
+		console.log(lastInvoice);
 		if(lastInvoice) {
 			return res.json(lastInvoice);
 		} else {

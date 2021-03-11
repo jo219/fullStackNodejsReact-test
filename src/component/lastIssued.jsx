@@ -85,7 +85,7 @@ class LastIssued extends React.Component {
           </thead>
           <tbody> { this.state.invoices.map((data) =>
             <tr key={data.id}>
-              <td><a href="/main/invoice/{data.id}">IV {data.id}</a></td>
+              <td><a href={`/main/invoice/${data.id}`}>IV {data.id}</a></td>
               <td>{data.customer}</td>
               <td>{(data.total).toFixed(2)}</td>
               <td>[<a href="#">Edit</a>] [<a href="#" name={data.id} onClick={this.requestInvoiceDelete.bind(this)}>Delete</a>]</td>

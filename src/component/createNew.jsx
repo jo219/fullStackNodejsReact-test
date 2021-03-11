@@ -159,7 +159,7 @@ class CreateNew extends React.Component {
               <td></td>
               <td>Sub Total</td>
               <td></td> <td></td> 
-              <td>{ this.state.subTotal }</td>
+              <td>{ (this.state.subTotal).toFixed(2) }</td>
             </tr>
             <tr>
               <td></td>

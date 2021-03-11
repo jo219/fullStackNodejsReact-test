@@ -18,6 +18,19 @@ router.get('/userInfo/:email', async (req, res) => {
 	}
 });
 
+route.get('invoice/:id', async(req, res) => {
+	try {
+		const lastInvoice = await Invoice.findOne().sort({"id": req.params.id});
+		if(lastInvoice) {
+			return res.json(lastInvoice);
+		} else {
+			return res.json({id: 0});
+		}
+	} catch(error) {
+		return res.status(400).send(error);
+	}
+});
+
 router.get('/lastInvoiceId', async(req, res) => {
 	try {
 		const lastInvoice = await Invoice.find().sort({"date": -1}).limit(1);

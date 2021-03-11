@@ -149,8 +149,8 @@ class CreateNew extends React.Component {
               <td>{data.id}</td>
               <td>{data.name}</td>
               <td>{data.qty}</td>
-              <td>{data.price}</td>
-              <td>{data.qty * data.price}</td>
+              <td>$ {data.price}</td>
+              <td>$ {data.qty * data.price}</td>
             </tr>
           )}
           </tbody>
@@ -159,19 +159,19 @@ class CreateNew extends React.Component {
               <td></td>
               <td>Sub Total</td>
               <td></td> <td></td> 
-              <td>{ (this.state.subTotal).toFixed(2) }</td>
+              <td>$ { (this.state.subTotal).toFixed(2) }</td>
             </tr>
             <tr>
               <td></td>
               <td>Tax 10%</td>
               <td></td> <td></td> 
-              <td>{ (this.state.subTotal * 0.1).toFixed(2) }</td>
+              <td>$ { (this.state.subTotal * 0.1).toFixed(2) }</td>
             </tr>
             <tr>
               <td></td>
               <td>Total</td>
               <td></td> <td></td> 
-              <td>{ (this.state.subTotal * 0.9).toFixed(2) }</td>
+              <td>$ { (this.state.subTotal * 0.9).toFixed(2) }</td>
             </tr>
           </tfoot>
         </table>

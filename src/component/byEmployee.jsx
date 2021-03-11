@@ -17,6 +17,15 @@ class ByEmployee extends React.Component {
     console.log(this.state.invoices);
   }
 
+  getDateFormat(curDate) {
+    var dd = String(curDate.getDate()).padStart(2, '0');
+    var mm = String(curDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = curDate.getFullYear();
+
+    curDate = mm + '/' + dd + '/' + yyyy;
+    return curDate
+  }
+
   handleFieldChange(e) {
     this.setState( (prevState) => ({
       ...prevState, 
@@ -65,9 +74,9 @@ class ByEmployee extends React.Component {
             <tr key={data.name}>
               <td>{data.name}</td>
               <td>{data.phone}</td>
-              <td>{data.invoices.id}</td>
-              <td>{data.invoices.date}</td>
-              <td>{data.invoices.total}</td>
+              <td>IV {data.invoices.id}</td>
+              <td>{this.getDateFormat(data.invoices.date)}</td>
+              <td>$ {data.invoices.total}</td>
             </tr>
           ) }</tbody>
         </table>

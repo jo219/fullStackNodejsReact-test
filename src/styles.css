@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 20%;
+}
+
+header {
+  margin-top: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  text-align: center;
+  background: gray; color: white;
+}
+
+nav {
+  margin: 7.5px 0; 
+  text-align: center;
+  /*background: #4285F4;*/
+}
+nav div {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 10px;
+  background: gray;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+nav div:hover {
+  background-color: red;
+}
+
+.signError {
+  background-color: red;
+  color: white;
+  padding: 20px;
+}
+
+main * {
+  display: block;
+}
+
+.loginInput {
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 20px;
+  border: 0;
+  border-bottom: 2px solid black;
+}
+
+.createInvoiceFields {
+  width: 15%;
+  margin: 2px;
+  margin-top: 30px;
+}
+
+input[type=button] {
+  margin-top: 15px;
+}
+
+.roleSelection {
+  display: flex;
+  align-items: center;
+}
+
+#signUpFields {
+  display: none;
+}
+
+#signOutButton {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.invoiceTable {
+  margin-top: 50px;
+}
+
+.invoiceTable th{
+  background-color: lightgray;
+  border: 1px solid white;
+  padding: 10px;
+  font-style: bold;
+}
+
+.invoiceTable th, .invoiceTable td, .profileTable th, .profileTable td{
+  padding: 7px;
+}
+
+.profileTable {
+  border: 0;
+}
+
+tfoot tr td {
+  font-style: bold;
+}

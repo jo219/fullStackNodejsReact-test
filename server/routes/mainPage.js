@@ -20,7 +20,7 @@ router.get('/userInfo/:email', async (req, res) => {
 
 router.get('invoice/:id', async (req, res) => {
 	try {
-		const lastInvoice = await Invoice.findOne().sort({"id": req.params.id});
+		const lastInvoice = await Invoice.findOne({"id": req.params.id});
 		if(lastInvoice) {
 			return res.json(lastInvoice);
 		} else {

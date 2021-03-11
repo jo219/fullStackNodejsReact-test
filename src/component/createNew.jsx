@@ -42,7 +42,7 @@ class CreateNew extends React.Component {
       itemsToSubmit: [...prevState.itemsToSubmit, this.state.itemToAdd]
     }));
     this.setState( (prevState) => ({
-      subTotal: prevState.subTotal += (this.state.itemToAdd.qty * this.state.itemToAdd.price).toFixed(2),
+      subTotal: prevState.subTotal += (this.state.itemToAdd.qty * this.state.itemToAdd.price),
     }));
 
     this.setState({
